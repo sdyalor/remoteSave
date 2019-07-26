@@ -1,0 +1,169 @@
+@model IEnumerable<webapi4.Models.SnVehiculo>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Placa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prefijo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Variable)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndVehiAlma)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NroSerie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Notas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clase)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Situacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Linea)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Propiedad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Idcarga)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Linecarga)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cod1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cod2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodCiaNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Placa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prefijo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Variable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IndVehiAlma)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NroSerie)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Notas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Clase)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Situacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Linea)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Propiedad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idcarga)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Linecarga)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cod.CodCia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cod1.CodCia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cod2.CodCia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodC.CodCia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodCiaNavigation.CodCia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodNavigation.CodCia)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>
